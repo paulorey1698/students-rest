@@ -1,0 +1,33 @@
+<h3>Crear Estudiante</h3>
+<div [hidden]="enviado" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="university_id">Id Universidad:</label>
+            <input type="text" class="form-control" id="university_id" name="university_id" required [(ngModel)]="student.university_id">
+        </div>
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control" id="name" name="name" required
+                [(ngModel)]="student.name">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" class="form-control" id="apellidos" name="apellidos" required [(ngModel)]="student.lastname">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" id="phone" name="phone" required
+                [(ngModel)]="student.phone">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="student.email">
+        </div>
+        
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <button (click)="verListado()" class="btn btn-secondary" style="margin-left: 10px;">Cancelar</button>
+    </form>
+</div>
+<div [hidden]="!enviado">
+    <h4>Usted envió satisfactoriamente !!!!</h4>
+</div>

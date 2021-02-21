@@ -1,0 +1,26 @@
+<h2>Detalle de Estudaintes</h2>
+<hr />
+<div *ngIf="student">
+    <div>
+        <label><b>ID Universidad:</b></label> {{student.university_id}}
+    </div>
+    <div>
+        <label><b>Nombre:</b></label> {{student.name}}
+    </div>
+    <div>
+        <label><b>Apellido:</b></label> {{student.lastname}}
+    </div>
+
+    <div>
+        <label><b>Teléfono:</b></label> {{student.phone}}
+    </div>
+    <div>
+        <label><b>Email:</b></label> {{student.email}}
+    </div>
+
+    <br><br>
+    <button (click)="verListado()" class="btn btn-primary">
+        Regresar a la lista de estudaintes
+
+    </button>
+</div>
