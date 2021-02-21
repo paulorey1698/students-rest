@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class StudentService {
-  private baseUrl = 'http://jordanegs.xyz/student';
+  private baseUrl = 'https://jordanegs.xyz/student';
   constructor(private http: HttpClient) { }
   getStudent(id: number): Observable<any> {
     return this.http.get(this.baseUrl + '/find/' + id)
